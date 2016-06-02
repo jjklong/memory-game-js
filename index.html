@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <title>Memory Game</title>
+  </head>
+
+
+  <body>
+    <div id="movement" class="tossing">
+    <div class="wrapper">
+      <header class="header_wrapper">
+        <h1>Mem<i class="fa fa-lightbulb-o" aria-hidden="true"></i>ry</h1>
+      </header>
+
+      <section>
+        <div class="section_wrapper">
+
+          <h2>NEW GAME</h2>
+
+          <div class="easyorhard_wrapper">
+
+<!-- **************** EASY BOX ****************** -->
+
+            <div class="ebox">
+              <input type="checkbox" id="easy_button">
+              <label class"easybox" for="easy_button">
+                <a class="easytext" href="game.html"><p>Easy</p></a>
+              </label>
+            </div>
+
+<!-- **************** HARD BOX ****************** -->
+
+            <div class="hbox">
+              <input type="checkbox" id="hard_button">
+              <label class="hardbox" for="hard_button">
+                <a class="hardtext" href="game.html"><p>Hard</p></a>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="assets/js/memorygame.js"></script>
+  </body>
+</html>

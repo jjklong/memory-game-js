@@ -1,0 +1,132 @@
+html{
+  font-size: 100%;
+}
+
+.wrapper{
+  position: relative;
+  display: block;
+}
+
+body{
+  font-size: 0.5em;
+  margin-top: 20em;
+  background: #338ea2;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/*.wrapper{
+  animation-name: wrapMove;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes wrapMove{
+  0% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(4%);
+	}
+	80%{
+		transform: translateY(-4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}*/
+
+/***********************HEADER************************
+******************************************************/
+.header_wrapper{
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+h1{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 9em;
+  font-weight: 400;
+}
+
+i{
+  padding: 10px;
+}
+
+/*******************MAIN CONTENT************************
+********************************************************/
+section{
+  text-align: center;
+  text-decoration: none
+}
+
+.section_wrapper{
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+h2{
+  font-size: 4em;
+  padding: 0;
+}
+
+/**************  EASY  &  HARD  ****************/
+
+.easyorhard_wrapper{
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 2em;
+}
+
+.easyorhard_wrapper a{
+  text-decoration: none;
+  color: white;
+}
+
+input{
+  display: none;
+}
+
+p{
+  padding: 1em 10em 1em 10em;
+  font-size: 1.6em;
+}
+
+p:hover{
+  transition-duration: .5s;
+  color: #338ea2;
+}
+
+/**************  EASY  BOX  ****************/
+
+.ebox {
+  margin: 1em;
+  border: solid white 5px;
+  transform: perspective(60em) rotateY(-45deg);
+}
+
+.ebox:hover{
+  transition-duration: .5s;
+  background: white;
+}
+
+/**************  HARD  BOX  ****************/
+
+.hbox{
+  margin: 1em;
+  border: solid white 5px;
+  transform: perspective(60em) rotateY(45deg);
+}
+
+.hbox:hover{
+  transition-duration: .5s;
+  background: white;
+}
