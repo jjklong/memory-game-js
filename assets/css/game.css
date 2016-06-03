@@ -64,26 +64,40 @@ li{
 
 /******************************/
 
-
+.perspective{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 500px;
+}
 
 .card1{
   width: 100px;
   height: 100px;
-  position: absolute;
+  position: relative;
   background: #7884cd;
   display: inline-block;
+  transform-style: preserve-3d;
+  transition: all .5s linear;
 }
 
 .front{
+  background: #7884cd;
   position: absolute;
   width: 100px;
   height: 100px;
   display: inline-block;
+  backface-visibility: hidden;
+  z-index: 2;
 }
 .back{
+  background: #7884cd;
   width: 100px;
   height: 100px;
   display: inline-block;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  z-index: 1;
 }
 
 /***********************MAIN CONTENT******************
