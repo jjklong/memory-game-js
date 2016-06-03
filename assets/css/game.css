@@ -1,0 +1,90 @@
+html{
+  font: 100%;
+}
+
+body{
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  background: #3e4eb8;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#wrapper{
+  background: #3e4eb8;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  padding-top: 1.5em;
+}
+
+section{
+  width: 100%;
+  min-width: 62.1em;
+  margin: 1em;
+}
+
+
+
+/***********************HEADER************************
+******************************************************/
+.header_wrapper{
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 2em;
+}
+
+h1{
+  padding: .1em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5em;
+}
+
+.lives{
+  padding: 1em;
+}
+
+/*HEARTS*/
+ul{
+  display: inline-flex;
+    float: left;
+}
+
+li{
+  padding: 1%;
+}
+
+/*TIMER*/
+.time {
+  float: right;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+/******************************/
+
+
+
+.card1{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: #7884cd;
+  display: inline-block;
+}
+
+.front{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.back{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+/***********************MAIN CONTENT******************
+******************************************************/

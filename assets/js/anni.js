@@ -14,5 +14,7 @@
 $(function animation() {
   $('.wrapper').animate(
     {top: 10}, 500, 'linear')
+    .animate({top: 0}, 500, 'linear')
+    .animate({top: 10}, 500, 'linear')
     .animate({top: 0}, 500, 'linear');
   });

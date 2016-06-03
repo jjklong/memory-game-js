@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>Memory Games</title>
+  </head>
+  <body>
+    <div id="wrapper">
+
+   <!-- HEADER ----------------------->
+
+      <header class="header_wrapper">
+        <h1>Mem<i class="fa fa-lightbulb-o" aria-hidden="true"></i>ry</h1>
+        <div class="lives">
+          <ul>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+          </ul>
+          <span class="time">05:22</span>
+        </div>
+      </header>
+
+  <!-- MAIN CONTENT ----------------------->
+      <section>
+        <div id="gameboard" class="flipinY">
+          <div class="perspective">
+            <div class="card1">
+              <div class="front">
+                FRONT
+              </div>
+              <div class="back">
+                BACK
+                <span class="idrop">
+                  <i class="fa fa-tint fa-3x" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- <label class="card" for="button1">
+          <input type="checkbox" id="button1">
+            <div class="icon_box">
+
+            </div>
+          </label>
+
+          <label class="card" for="button2">
+            <input type="checkbox" id="button2">
+            <span class="icon_box">
+              <span class="itwitter">
+                <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label> -->
+
+          <!-- <label class="card" for="button3">
+            <input type="checkbox" id="button3">
+            <span class="icon_box">
+              <span class="imagic">
+                <i class="fa fa-magic fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button4">
+            <input type="checkbox" id="button4">
+            <span class="icon_box">
+              <span class="imeh">
+                <i class="fa fa-meh-o fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button5">
+            <input type="checkbox" id="button5">
+            <span class="icon_box">
+              <span class="itree">
+                <i class="fa fa-tree fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button6">
+            <input type="checkbox" id="button6">
+            <span class="icon_box">
+              <span class="igg">
+                <i class="fa fa-gg fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button7">
+            <input type="checkbox" id="button7">
+            <span class="icon_box">
+              <span class="iglide">
+                <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button8">
+            <input type="checkbox" id="button8">
+            <span class="icon_box">
+              <span class="igg">
+                <i class="fa fa-gg fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button9">
+            <input type="checkbox" id="button9">
+            <span class="icon_box">
+              <span class="ibug">
+                <i class="fa fa-bug fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button10">
+            <input type="checkbox" id="button10">
+            <span class="icon_box">
+              <span class="ibeer">
+                <i class="fa fa-beer fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button11">
+            <input type="checkbox" id="button11">
+            <span class="icon_box">
+              <span class="ibug">
+                <i class="fa fa-bug fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button12">
+            <input type="checkbox" id="button12">
+            <span class="icon_box">
+              <span class="iflash">
+                <i class="fa fa-glide-g fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button13">
+            <input type="checkbox" id="button13">
+            <span class="icon_box">
+              <span class="iglide">
+                <i class="fa fa-glide-g fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button14">
+            <input type="checkbox" id="button14">
+            <span class="icon_box">
+              <span class="idrop">
+                <i class="fa fa-magic fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button15">
+            <input type="checkbox" id="button15">
+            <span class="icon_box">
+              <span class="imeh">
+                <i class="fa fa-meh-o fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button16">
+            <input type="checkbox" id="button16">
+            <span class="icon_box">
+              <span class="ibeer">
+                <i class="fa fa-beer fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button17">
+            <input type="checkbox" id="button17">
+            <span class="icon_box">
+              <span class="idrop">
+                <i class="fa fa-tint fa-3x" aria-hidden="true"></i>
+              </span>
+            </span>
+          </label>
+
+          <label class="card" for="button18">
+            <input type="checkbox" id="button18">
+            <span class="icon_box">
+              <span class="itree">
+                <i class="fa fa-tree fa-3x" aria-hidden="true"></i>
+              </span>
+            </span> -->
+          </label>
+
+
+
+
+
+        </div>
+      </section>
+    </div>
+
+    <script type="text/javascript" src="assets/js/memorygame.js">
+    </script>
+  </body>
