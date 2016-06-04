@@ -1,66 +1,37 @@
-var clicker = 0;              //define variable 'clicker' to track the number of clicks later. Start at 0.
-console.log(clicker);
+var clicker = 0;                                  //define variable 'clicker' to track the number of clicks later. Start at 0.
+console.log(clicker);                             //show initial clicker value in console
 
-var whichIcon = $('.card1').attr('value');
-console.log(whichIcon);
+$('.card1').click(function () {                   //select '.card1' class and run the following function when one is clicked
+  clicker++;                                      //on each mouse click, the clicker value increases by one
 
-
-$('.card1').on('click', function() {              //select '.card1' and on the mouse click, run this function:
-  $(this).css('transform', 'rotateY(180deg)');    //select 'this' and assign CSS to rotate 180deg
-  clicker++;                                      //the clicker starting at 0 increase 1 interval upon each click
-  console.log(clicker);                           //track the click amount
-
-  var whichIcon = $(this).attr('value');          //on each click, the variable 'whichIcon' will track the 'value' attribute of '.card1'
-  console.log(whichIcon);                         //log each value when clicked
-
+  if (clicker == 1) {                             //if the clicker value is equal to 1....
+    $(this).css('transform', 'rotateY(180deg)');  //select THIS and change the CSS style transform to rotate 180degrees
+    console.log($(this).attr('value'));           //show the attribute 'value' in the console when clicked
+    console.log(clicker);                         //show the current 'click' - should be 1
+  }
+  else if (clicker == 2) {                        //if the clicker value is equal to 2....
+    $(this).css('transform', 'rotateY(180deg)');  //select THIS and change the CSS style transform to rotate 180degrees
+    console.log($(this).attr('value'));           //show the attribute 'value' in the console when clicked
+    console.log(clicker);                         //show the current 'click' - should be 2
+    clicker = 0;                                  //after the second click, now set the clicker back to 0
+  }
 });
 
 
-
-
-  // var firstCard = $(this).attr('value');
-  // console.log(firstCard);
-  // var secondCard = clicker[2];
-  // console.log(clicker[2]);
-
-
-
-
-//   var checkClass = $('.idrop').
+//SETTING UP FUNCTION TO ROTATE ON CLICK, BUT ONLY ALLOWING 2 CLICKS BEFORE RESET
+// $('.card1').on('click', function () {              //select '.card1' and on the mouse click, run this function:
+//   $(this).css('transform', 'rotateY(180deg)');    //select 'this' and assign CSS to rotate 180deg
+//   clicker++;                                      //the clicker starting at 0 increase 1 interval upon each click
+//   console.log(clicker);                           //track the click amount
 //
-//   if ($(this).hasClass('fa-twitter')) {
-//     return true;
-//   } else if (!$(this).hasClass('fa-twitter')) {
-//     return false;
+//   var whichIcon = $(this).attr('value');          //on each click, the variable 'whichIcon' will track the 'value' attribute of '.card1'
+//   console.log(whichIcon);                         //log each value when clicked
+//
+//   if (clicker == 1) {
+//     return 1;
 //   }
-// });
-//
-// function cardMatch (firstCard, secondCard) {
-//   if (firstCard === secondCard) return true;
-//
-//   var classCheck = $('.idrop').
-// }
-
-
-
-
-
-// $('.perspective').on('click', function(e) {
-//   if ($('.card1').hasClass('fa-beer')) {
-//     $('.card1').removeClass('fa');
+//   else if (clicker == 2) {
+//     $(this).css('transform', 'rotateY(180deg)');
 //   }
+//
 // });
-
-
-// / var icons = $('.card1');
-// console.log(icons);
-//
-////IF this class matches this class, do nothing
-// var icons = $('.card1');
-// var c = icons.indexOf($());
-//
-// if (c<3) {
-//   console.log(c);
-// } else {
-//   $(this).css('transform', 'rotateY(-180deg)');
-// }
