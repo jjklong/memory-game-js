@@ -16,9 +16,10 @@ console.log(sec);
 var min = baseline.getMinutes();   //grab minutes too
 console.log(min);
 
-setInterval(function () {
-  $('.time').text(min + " : " + sec);
-});
+setInterval(function () {             //call this function every 1000ms
+  $('.time').text((new Date() - baseline)); //select the time class and add the text value of a new date - the baseline date variable defined
+}, 1000);                             //run this function every 1000ms
+//prints in ms 
 
 
 ////////////////////////////////
