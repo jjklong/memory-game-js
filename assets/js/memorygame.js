@@ -1,3 +1,32 @@
+////////////////////////////////
+////////////////////////////////
+//////////////TIMER/////////////
+////////////////////////////////
+////////////////////////////////
+//1) track time
+//2) print current time
+//3) needs to be a continuous loop or repeating function
+/////setTimeout - can specify time delay in ms
+/////setInterval - calls a function with a specific time interval between each call (in ms)
+var baseline = new Date();        //create a variable assigned to a new Date() instance for this moment in time
+var today = baseline.getTime();    //variable today equals the exact time this page loads (that single instance)
+console.log(today);                //console current time
+var sec = baseline.getSeconds();   //get the exact seconds
+console.log(sec);
+var min = baseline.getMinutes();   //grab minutes too
+console.log(min);
+
+setInterval(function () {
+  $('.time').text(min + " : " + sec);
+});
+
+
+////////////////////////////////
+////////////////////////////////
+//////////////CARDS/////////////
+////////////////////////////////
+////////////////////////////////
+
 var clicker = 0;                                  //define variable 'clicker' to track the number of clicks later. Start at 0.
 console.log(clicker);                             //show initial clicker value in console
 //
