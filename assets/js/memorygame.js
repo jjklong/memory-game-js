@@ -16,10 +16,43 @@ console.log(sec);
 var min = baseline.getMinutes();   //grab minutes too
 console.log(min);
 
-setInterval(function () {             //call this function every 1000ms
-  $('.time').text((new Date() - baseline)); //select the time class and add the text value of a new date - the baseline date variable defined
-}, 1000);                             //run this function every 1000ms
-//prints in ms 
+////////////////////////////////
+///////////COUNT UP BY 1////////
+////////////////////////////////
+//setInterval printing every 1000ms the new Date() into '.time' class
+// setInterval(function () {             //call this function every 1000ms
+//   var timeUp = Math.floor((new Date() - baseline)/1000) //
+//   $('.time').text(timeUp); //select the time class and add the text value of a new date - the baseline date variable defined
+// }, 1000);                             //run this function every 1000ms
+// //prints in ms
+// //Math.floor takes the highest integer
+
+////////////////////////////////
+/////////COUNT UP TIME /////////
+////////////////////////////////
+
+setInterval(function math() {                             //using same setInterval function as above
+  var timeUp = Math.floor((new Date() - baseline)/1000);  //variable timeUp equals the highest integer of the difference between page load and baseline divided by 1000ms
+
+  var minutes = Math.floor(timeUp/60);      //minutes = highest integer of timeUp counter divided by 60 seconds
+  var seconds = (timeUp - (minutes*60));    //seconds = counter minus how many minutes have passed
+
+//4 different cases for the time and where the 0: or :0 should
+  switch (true) {
+    case timeUp<=9:                       //when timeUp less than or equal to 9
+      $('.time').text("00:0" + timeUp);   //print this
+        break;
+    case timeUp>=10 && timeUp<=59:        //2 digits only print 00:
+      $('.time').text("00:" + timeUp);
+        break;
+    case timeUp>=60 && timeUp<=69:        //when the first minute adds, make sure seconds still have 0 in front
+      $('.time').text("0" + minutes + ":0" + seconds);
+        break;
+    case timeUp>=70:                      
+      $('.time').text("0" + minutes + ":" + seconds);
+  }
+
+}, 1000);   //repeat this in intervals of 1000ms = 1second
 
 
 ////////////////////////////////
