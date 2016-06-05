@@ -25,6 +25,7 @@ $('.card1').click(function () {                     //select '.card1' class and 
 
   if (clicker < 3) {                                //if the click is less than 3, rotate card
     $(this).css('transform', 'rotateY(180deg)');
+    $(this).addClass('flipped');
     console.log($(this).attr('value'));
     console.log(clicker);
   }
@@ -37,10 +38,12 @@ $('.card1').click(function () {                     //select '.card1' class and 
     clicker = 0;
   }                                                 //if clicker equals 2 and the values dont match, turn cards back over and remove 'flipped' class
   else if ((clicker == 2) && ($(this).attr('value') !== ($('.flipped').attr('value')))) {
-    $(this).css('transform', 'rotateY(-180deg)').removeClass('flipped');
-    $('.flipped').css('transform', 'rotateY(-180deg)').removeClass('flipped');
-    clicker = 0;    //reset clicker to 0
-  }
+    setTimeout(function () {
+      $(this).css('transform', 'rotateY(-180deg)').removeClass('flipped');
+      $('.flipped').css('transform', 'rotateY(-180deg)').removeClass('flipped');
+      clicker = 0;    //reset clicker to 0
+  }, 1000);
+}
 });
 
 ///////////////////////

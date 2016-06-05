@@ -2,6 +2,10 @@ html{
   font: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body{
   font-size: 1em;
   padding: 0;
@@ -12,19 +16,46 @@ body{
 }
 
 #wrapper{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
   background: #3e4eb8;
   color: white;
   font-family: 'Orbitron', sans-serif;
   padding-top: 1.5em;
 }
 
-section{
-  /*width: 100%;
-  min-width: 62.1em;
-  margin: 1em;*/
+/*section{
+  width: 100%;
+  margin: 1em auto;
+}*/
+
+/***********************MEDIA************************
+******************************************************/
+
+@media screen and (min-width:1000px){
+  #gameboard{
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  section{
+    width: 100%;
+    margin: 1em auto;
+  }
 }
 
-
+@media screen and (min-width:550px) and (max-width: 1000px) {
+  #gameboard{
+    width: 100%;
+  }
+  .perspective{
+    width: 100%;
+  }
+  section{
+    width: 100%;
+    margin: 1em auto;
+  }
+}
 
 /***********************HEADER************************
 ******************************************************/
@@ -51,7 +82,7 @@ ul{
     float: left;
 }
 
-li{
+.heart{
   padding: 1%;
 }
 
@@ -65,15 +96,16 @@ li{
 /******************************/
 
 .perspective{
+  margin: .2em;
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   perspective: 500px;
 }
 
 .card1{
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   position: relative;
   background: #7884cd;
   display: inline-block;
@@ -84,16 +116,16 @@ li{
 .front{
   background: #7884cd;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   display: inline-block;
   backface-visibility: hidden;
   z-index: 2;
 }
 .back{
   background: #7884cd;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   display: inline-block;
   transform: rotateY(-180deg);
   backface-visibility: hidden;
