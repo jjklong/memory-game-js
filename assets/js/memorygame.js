@@ -48,7 +48,7 @@ setInterval(function math() {                             //using same setInterv
     case timeUp>=60 && timeUp<=69:        //when the first minute adds, make sure seconds still have 0 in front
       $('.time').text("0" + minutes + ":0" + seconds);
         break;
-    case timeUp>=70:                      
+    case timeUp>=70:
       $('.time').text("0" + minutes + ":" + seconds);
   }
 
@@ -86,24 +86,29 @@ console.log(clicker);                             //show initial clicker value i
 $('.card1').click(function () {                     //select '.card1' class and run the following function when one is clicked
   clicker++;                                        //on each mouse click, the clicker value increases by one
 
-  if (clicker < 3) {                                //if the click is less than 3, rotate card
-    $(this).css('transform', 'rotateY(180deg)');
-    $(this).addClass('flipped');
-    console.log($(this).attr('value'));
-    console.log(clicker);
+  if (clicker == 1) {                                //if the click is less than 3, rotate card
+    $(this).css('transform', 'rotateY(180deg)')
+    .addClass('flipped');
+    // $('.card1').addClass('flipped');
+    // console.log($(this).attr('value'));
+    // console.log(clicker);
   }
-  if (clicker == 1) {                               //if clicker equals 1, add 'flipped' class
-    $(this).addClass('flipped');
-  }                                                 //if clicker equals 2 and the values equal each other, remove the flipped class and add match
-  else if ((clicker == 2) && ($(this).attr('value') == ($('.flipped').attr('value')))) {
-    $(this).addClass('match').removeClass('flipped');
+  // if (clicker == 1) {                               //if clicker equals 1, add 'flipped' class
+  //   $('.card1').addClass('flipped');
+  // }                                                 //if clicker equals 2 and the values equal each other, remove the flipped class and add match
+  else if ((clicker == 2) && ($(this).attr('value')
+            == ($('.flipped').attr('value')))) {
+    $('.card1').addClass('match').removeClass('flipped');
     $('.flipped').addClass('match').removeClass('flipped');
     clicker = 0;
   }                                                 //if clicker equals 2 and the values dont match, turn cards back over and remove 'flipped' class
-  else if ((clicker == 2) && ($(this).attr('value') !== ($('.flipped').attr('value')))) {
+  else if ((clicker == 2) && ($(this).attr('value')
+            !== ($('.flipped').attr('value')))) {
     setTimeout(function () {
-      $(this).css('transform', 'rotateY(-180deg)').removeClass('flipped');
-      $('.flipped').css('transform', 'rotateY(-180deg)').removeClass('flipped');
+      $(this).css('transform', 'rotateY(-180deg)')
+        .removeClass('flipped');
+      $('.flipped').css('transform', 'rotateY(-180deg)')
+        .removeClass('flipped');
       clicker = 0;    //reset clicker to 0
   }, 1000);
 }
